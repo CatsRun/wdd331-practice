@@ -1,0 +1,242 @@
+/* ========================================
+   TOKENS
+   Define your design decisions here.
+   Everything else in this file should
+   reference these tokens with var().
+   ======================================== */
+:root {
+  /* Colors: at least primary, background, text, accent */
+  --color-primary: #ffa136;
+  --color-background: #feffdc;
+  --color-background-secondary: #fff;
+
+  /* --color-accent: #ffa136; */
+  --color-accent: #c18a09b2;
+  --color-lable-sm: #c18a09aa;
+  --color-shadow: #0c0c0c 0px 4px 8px, #0c0c0c 0px 6px 20px;
+  --color-shadow-secondary: #0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px;
+
+  /* text color */
+  --color-text: #0c0c0c;
+  --color-paragraph: #0c0c0c;
+
+  /* Spacing: at least sm, md, lg */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+
+  /* padding */
+  --padding-sm: var(--spacing-sm);
+  --padding-md: var(--spacing-md);
+  --padding-lg: var(--spacing-lg);
+
+  /* Typography: font family, base size */
+  --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-sm: 1rem;
+  --font-size-base: 1.5rem;
+  /* **should this have vw to size to view window?** */
+  --font-size-lg: 3.2rem;
+
+  /* change in headings */
+  --font-h1-difference: 2;
+  --font-h2-difference: 1.7;
+  --font-h3-difference: 1.1;
+
+  /* h1 */
+  --font-size-sm-h1: calc(var(--font-size-sm) * var(--font-h1-difference));
+  --font-size-base-h1: calc(var(--font-size-base) * var(--font-h1-difference));
+  --font-size-lg-h1: calc(var(--font-size-lg) * var(--font-h1-difference));
+
+  /* h2 */
+  --font-size-sm-h2: calc(var(--font-size-sm) * var(--font-h2-difference));
+  --font-size-base-h2: calc(var(--font-size-base) * var(--font-h2-difference));
+  --font-size-lg-h2: calc(var(--font-size-lg) * var(--font-h2-difference));
+
+  /* h3 */
+  --font-size-sm-h3: calc(var(--font-size-sm) * var(--font-h3-difference));
+  --font-size-base-h3: calc(var(--font-size-base) * var(--font-h3-difference));
+  --font-size-lg-h3: calc(var(--font-size-lg) * var(--font-h3-difference));
+
+  /* Borders: radius */
+  --border-radius: 8px;
+}
+
+/* ========================================
+   RESET
+   A minimal reset so you start clean.
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   Style the body, links, and any raw
+   HTML elements here. Use nesting.
+   ======================================== */
+body {
+  /* font family, color, background, line-height, padding */
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  accent-color: var(--color-primary);
+  line-height: var(--line-height-md);
+
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg);
+
+  /* Use clamp() for padding to make it fluid. */
+  padding: clamp(var(--padding-sm) var(--padding-md) var(--padding-lg));
+
+  a {
+    /* link color from tokens */
+    accent-color: var(--color-accent);
+    &:hover {
+      /* hover color from tokens */
+      accent-color: var(--color-accent);
+    }
+  }
+}
+
+/* ========================================
+   NAVIGATION
+   Style .site-nav so students can get
+   back to the homepage.
+   ======================================== */
+.site-nav {
+  /* padding, margin-bottom */
+  padding: var(--padding-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ========================================
+   BOARD HEADER
+   Style the page header area.
+   ======================================== */
+.board-header {
+  /* text alignment, margin, padding */
+
+  /* Use clamp() for the h1 font size. */
+  h1 {
+    /* fluid font size */
+    font-size: clamp(
+      var(--font-size-sm-h1),
+      var(--font-size-base-h1),
+      var(--font-size-lg-h1)
+    );
+  }
+
+  p {
+    /* muted text color, spacing */
+    color: var(--color-accent);
+    margin-top: var(--spacing-sm);
+  }
+}
+
+/* ========================================
+   CARD GROUP
+   Each section of cards (This Week,
+   Coming Up, Announcements).
+   ======================================== */
+.card-group {
+  /* margin-bottom using a token */
+
+  h2 {
+    /* section heading styles */
+    font-size: clamp(
+      var(--font-size-sm-h2),
+      var(--font-size-base-h2),
+      var(--font-size-lg-h2)
+    );
+  }
+}
+
+/* ========================================
+   CARDS GRID
+   Layout the .cards container as a
+   responsive grid or flex layout.
+   ======================================== */
+.cards {
+  /* display, gap (use calc to derive from a token), columns */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(var(--spacing-md) * 2);
+}
+
+/* ========================================
+   INDIVIDUAL CARD
+   Style each .card article. This is where
+   most of your nesting will happen.
+   ======================================== */
+.card {
+  /* background, padding, border-radius, shadow */
+  /* Use a var() with a fallback value here. */
+  background-color: var(--color-accent, --color-background-secondary);
+  box-shadow: var(--color-shadow, --color-shadow-secondary);
+  border-radius: 25px;
+  margin: var(--spacing-sm);
+  padding: var(--padding-md);
+
+  .card-tag {
+    /* small label: font-size, padding, background, border-radius */
+    font-size: var(--font-size-base, 0.75rem);
+    font-weight: bold;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    background: var(--color-lable-sm);
+  }
+
+  h3 {
+    /* card title styles */
+    font-size: clamp(
+      var(--font-size-sm-h3),
+      var(--font-size-base-h3),
+      var(--font-size-lg-h3)
+    );
+  }
+
+  p {
+    /* card body text */
+    color: var(--color-paragraph);
+    font-family: var(--font-body);
+    font-size: clamp(
+      var(--font-size-sm),
+      var(--font-size-base),
+      var(--font-size-lg)
+    );
+  }
+
+  .card-meta {
+    /* bottom row: flexbox with space-between */
+    display: flex;
+    justify-content: space-between;
+    /* style the span and link inside here with nesting */
+    span {
+      font-size: var(--font-size-sm);
+    }
+    a {
+      accent-color: var(--color-primary);
+    }
+  }
+}
+
+/* ========================================
+   FOOTER
+   Style the .board-footer at the bottom.
+   ======================================== */
+.board-footer {
+  /* text alignment, padding, muted color, top border */
+  margin-top: var(--spacing-lg);
+  padding: var(--padding-md);
+  text-align: center;
+  color: var(--color-lable-sm);
+  border-top: 2px solid var(--color-lable-sm);
+}
