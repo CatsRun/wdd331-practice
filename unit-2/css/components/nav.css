@@ -1,0 +1,37 @@
+/* Navigation component: .site-nav and its links
+   Style the active link using aria-current. */
+
+/* TODO: Style the navigation */
+
+.site-nav {
+  /* text-decoration: none;
+  background-color: aqua; */
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-large);
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.site-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+}
+
+.site-nav a[aria-current='page'] {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.site-nav a:not([aria-current='page']) {
+  opacity: 0.8;
+}
