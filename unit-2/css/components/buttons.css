@@ -1,0 +1,41 @@
+/* Button components: .btn, .primary, .secondary, disabled state
+   Use native nesting for pseudo-classes and modifiers. */
+
+/* TODO: Style the button components */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: clamp(
+    var(--spacing-small),
+    var(--spacing-medium),
+    var(--spacing-large)
+  );
+  margin: clamp(
+    var(--spacing-small),
+    var(--spacing-medium),
+    var(--spacing-large)
+  );
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button.primary {
+  background-color: var(--color-primary);
+}
+
+button.secondary {
+  background-color: var(--color-primary-dim);
+}
+
+button:disabled {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  /* cursor: not-allowed; */
+  opacity: 0.6;
+}

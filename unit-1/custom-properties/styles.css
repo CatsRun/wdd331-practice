@@ -94,7 +94,7 @@ body {
   margin: var(--spacing-lg);
 
   /* Use clamp() for padding to make it fluid. */
-  padding: clamp(var(--padding-sm) var(--padding-md) var(--padding-lg));
+  padding: clamp(var(--padding-sm), var(--padding-md), var(--padding-lg));
 
   a {
     /* link color from tokens */
@@ -181,6 +181,7 @@ body {
   /* Use a var() with a fallback value here. */
   background-color: var(--color-accent, --color-background-secondary);
   box-shadow: var(--color-shadow, --color-shadow-secondary);
+  /* box-shadow: var(--color-shadow, (#0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px)); */
   border-radius: 25px;
   margin: var(--spacing-sm);
   padding: var(--padding-md);

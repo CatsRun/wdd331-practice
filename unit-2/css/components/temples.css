@@ -1,0 +1,26 @@
+/* Temple list component: .temples, .temple-name, .temple-status
+   Style the status badges differently based on class (.open, .construction). */
+
+/* TODO: Style the temple list */
+.temple-list {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: var(--spacing-md);
+}
+
+.temple-status.open {
+  font-weight: bolder;
+}
+
+/* these two do the same thing in different ways. */
+
+/* .temple-status.construction {
+  font-style: italic;
+} */
+
+.temple-status:not(.temple-status.open) {
+  font-style: italic;
+}
+
+/* ------------- */

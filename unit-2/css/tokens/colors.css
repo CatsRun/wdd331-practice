@@ -1,0 +1,12 @@
+/* Color tokens: define all color values for the site.
+   Name by purpose (--color-primary, --color-surface)
+   not appearance (--blue, --light-gray). */
+:root {
+  /* TODO: Define color tokens here */
+  --color-primary: #003b36;
+  --color-primary-dim: #003b36e6;
+  --color-background: #ece5f0;
+  --color-text: black;
+  --color-accent: #e98a15;
+  --color-accent-dim: #e98a15a1;
+}
