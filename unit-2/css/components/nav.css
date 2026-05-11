@@ -4,10 +4,7 @@
 /* TODO: Style the navigation */
 
 .site-nav {
-  /* text-decoration: none;
-  background-color: aqua; */
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
 }
 
@@ -22,16 +19,18 @@
 
 .site-nav a {
   color: var(--color-primary);
-  text-decoration: none;
+  /* text-decoration: none; */
   padding: var(--spacing-small);
   border-radius: var(--border-radius);
 }
 
+/* active nav link is highlighted */
 .site-nav a[aria-current='page'] {
   background-color: var(--color-primary);
   color: var(--color-background);
 }
 
+/* nav buttons not in use have lower opacity */
 .site-nav a:not([aria-current='page']) {
   opacity: 0.8;
 }
