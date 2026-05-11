@@ -1,6 +1,8 @@
 /* Color tokens: define all color values for the site.
    Name by purpose (--color-primary, --color-surface)
    not appearance (--blue, --light-gray). */
+/* color pallete https://coolors.co/012622-003b36-ece5f0-e98a15-4e3d42  */
+
 :root {
   /* TODO: Define color tokens here */
   --color-primary: #003b36;
