@@ -11,6 +11,13 @@ Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
 every push to main.
 
+## Helpful things
+
+lightning css manual rebuild, updated with: npm run build
+to install auto rebuild: npm install --save-dev chokidar-cli
+auto rebuild: npm run watch
+stop watch with Ctlr + c
+
 ## Pages
 
 - [Home](index.html)

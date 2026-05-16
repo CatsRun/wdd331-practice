@@ -1,3 +1,27 @@
+/* Layer declaration: controls cascade order */
+@layer tokens, base, layout, components, utilities;
+
+/* Tokens */
+@import url('tokens/colors.css') layer(tokens);
+@import url('tokens/variables.css') layer(tokens);
+
+/* Base */
+@import url('base/reset.css') layer(base);
+@import url('base/elements.css') layer(base);
+
+/* Layout */
+@import url('layout/primary.css') layer(layout);
+
+/* Components */
+@import url('components/card.css') layer(components);
+
+/* Utilities */
+@import url('utilities/utilities.css') layer(utilities);
+
+/* https://byui-cse.github.io/wdd331r-course/unit/2/learn/css-architecture.html */
+/* the file system tells you where to look, and the layer stack tells the browser how to prioritize. */
+/*  unlayered rules always win over layered ones regardless of specificity or layer order.unlayered styles belong at the bottom of main.css, after all of your @import statements */
+
 *,
 *::before,
 *::after {
