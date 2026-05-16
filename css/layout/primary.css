@@ -1,0 +1,29 @@
+/* structural rules for the page skeleton: the overall grid, content widths, header and footer positioning. Layout classes handle composition without caring what component sits inside them. */
+
+/* define the page skeleton with simple class selectors. These are flat cascade glue: they apply broadly and do not belong inside a component scope. */
+
+/* ***************************************************** */
+/* https://byui-cse.github.io/wdd331r-course/unit/2/learn/css-architecture.html */
+/* base/elements.css: flat, top-level element styles */
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-primary-light);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+/* ***************************************************** */
