@@ -1,1 +1,51 @@
 /* components/ holds the styled UI pieces: cards, buttons, navigation, forms. Because tokens and base styles do most of the heavy lifting, component files tend to be lightweight. */
+
+.card {
+  /* background, padding, border-radius, shadow */
+  /* Use a var() with a fallback value here. */
+  background-color: var(--color-accent, --color-background-secondary);
+  box-shadow: var(--color-shadow, --color-shadow-secondary);
+  /* box-shadow: var(--color-shadow, (#0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px)); */
+  border-radius: 25px;
+  margin: var(--spacing-sm);
+  padding: var(--padding-md);
+
+  .card-tag {
+    /* small label: font-size, padding, background, border-radius */
+    font-size: var(--font-size-base, 0.75rem);
+    font-weight: bold;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    background: var(--color-lable-sm);
+  }
+
+  h3 {
+    /* card title styles */
+    font-size: clamp(
+      var(--font-size-sm-h3),
+      var(--font-size-base-h3),
+      var(--font-size-lg-h3)
+    );
+  }
+
+  p {
+    /* card body text */
+    color: var(--color-paragraph);
+    font-family: var(--font-body);
+    font-size: clamp(
+      var(--font-size-sm),
+      var(--font-size-base),
+      var(--font-size-lg)
+    );
+  }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: var(--font-size-sm);
+    }
+    a {
+      accent-color: var(--color-primary);
+    }
+  }
+}

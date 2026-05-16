@@ -21,15 +21,15 @@
 /* https://byui-cse.github.io/wdd331r-course/unit/2/learn/css-architecture.html */
 /* the file system tells you where to look, and the layer stack tells the browser how to prioritize. */
 /*  unlayered rules always win over layered ones regardless of specificity or layer order.unlayered styles belong at the bottom of main.css, after all of your @import statements */
-
+/* 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
+} */
+/* 
 :root {
   --color-bg: #f4f6f8;
   --color-text: #1e293b;
@@ -39,8 +39,8 @@
   --space-md: 1rem;
   --space-lg: 2rem;
   --font-body: system-ui, -apple-system, sans-serif;
-}
-
+} */
+/* 
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -55,4 +55,4 @@ a {
 
 a:hover {
   color: var(--color-primary-hover);
-}
+} */
