@@ -2,10 +2,39 @@
 
 /* define the page skeleton with simple class selectors. These are flat cascade glue: they apply broadly and do not belong inside a component scope. */
 
+.card-group {
+  /* margin-bottom using a token */
+
+  h2 {
+    /* section heading styles */
+    font-size: clamp(
+      var(--font-size-sm-h2),
+      var(--font-size-base-h2),
+      var(--font-size-lg-h2)
+    );
+  }
+}
+
+.cards {
+  /* display, gap (use calc to derive from a token), columns */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(var(--spacing-md) * 2);
+}
+
+.board-footer {
+  /* text alignment, padding, muted color, top border */
+  margin-top: var(--spacing-lg);
+  padding: var(--padding-md);
+  text-align: center;
+  color: var(--color-lable-sm);
+  border-top: 2px solid var(--color-lable-sm);
+}
+
 /* ***************************************************** */
 /* https://byui-cse.github.io/wdd331r-course/unit/2/learn/css-architecture.html */
 /* base/elements.css: flat, top-level element styles */
-body {
+/* body {
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
@@ -25,5 +54,5 @@ h2,
 h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
-}
+} */
 /* ***************************************************** */

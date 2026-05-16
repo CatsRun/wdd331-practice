@@ -1,30 +1,78 @@
 /* here sould have: Spacing, typography, radii, shadows, transitions, and more */
+:root {
+  /* Spacing: at least sm, md, lg */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+
+  /* padding */
+  --padding-sm: var(--spacing-sm);
+  --padding-md: var(--spacing-md);
+  --padding-lg: var(--spacing-lg);
+
+  /* Typography: font family, base size */
+  --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-sm: 1rem;
+  --font-size-base: 1.5rem;
+  /* **should this have vw to size to view window?** */
+  --font-size-lg: 3.2rem;
+
+  /* change in headings */
+  --font-h1-difference: 2;
+  --font-h2-difference: 1.7;
+  --font-h3-difference: 1.1;
+
+  /* shadow */
+  --color-shadow: #0c0c0c 0px 4px 8px, #0c0c0c 0px 6px 20px;
+  --color-shadow-secondary: #0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px;
+
+  /* h1 */
+  --font-size-sm-h1: calc(var(--font-size-sm) * var(--font-h1-difference));
+  --font-size-base-h1: calc(var(--font-size-base) * var(--font-h1-difference));
+  --font-size-lg-h1: calc(var(--font-size-lg) * var(--font-h1-difference));
+
+  /* h2 */
+  --font-size-sm-h2: calc(var(--font-size-sm) * var(--font-h2-difference));
+  --font-size-base-h2: calc(var(--font-size-base) * var(--font-h2-difference));
+  --font-size-lg-h2: calc(var(--font-size-lg) * var(--font-h2-difference));
+
+  /* h3 */
+  --font-size-sm-h3: calc(var(--font-size-sm) * var(--font-h3-difference));
+  --font-size-base-h3: calc(var(--font-size-base) * var(--font-h3-difference));
+  --font-size-lg-h3: calc(var(--font-size-lg) * var(--font-h3-difference));
+
+  /* Borders: radius */
+  --border-radius: 8px;
+}
 
 /* ***************************************************** */
 /* https://byui-cse.github.io/wdd331r-course/unit/2/learn/css-architecture.html */
-:root {
-  /* Spacing */
-  --space-xs: 0.25rem;
+/* :root { */
+/* Spacing */
+/* --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
-  --space-xl: 4rem;
+  --space-xl: 4rem; */
 
-  /* Typography */
-  --font-body: system-ui, sans-serif;
+/* Typography */
+/* --font-body: system-ui, sans-serif;
   --font-heading: Georgia, serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
+  --text-xl: 1.5rem; */
 
-  /* Borders */
-  --radius-sm: 0.25rem;
+/* Borders */
+/* --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
-  --radius-lg: 1rem;
+  --radius-lg: 1rem; */
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+/* Shadows */
+/* --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
+} */
 /* ***************************************************** */

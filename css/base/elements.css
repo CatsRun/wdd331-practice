@@ -1,1 +1,49 @@
 /*  element-level styles (body, headings, links) */
+body {
+  /* font family, color, background, line-height, padding */
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  accent-color: var(--color-primary);
+  line-height: var(--line-height-md);
+
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg);
+
+  /* Use clamp() for padding to make it fluid. */
+  padding: clamp(var(--padding-sm), var(--padding-md), var(--padding-lg));
+
+  a {
+    /* link color from tokens */
+    accent-color: var(--color-accent);
+    &:hover {
+      /* hover color from tokens */
+      accent-color: var(--color-accent);
+    }
+  }
+}
+
+/* navigation */
+.site-nav {
+  /* padding, margin-bottom */
+  padding: var(--padding-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.board-header {
+  h1 {
+    /* fluid font size */
+    font-size: clamp(
+      var(--font-size-sm-h1),
+      var(--font-size-base-h1),
+      var(--font-size-lg-h1)
+    );
+  }
+
+  p {
+    /* muted text color, spacing */
+    color: var(--color-accent);
+    margin-top: var(--spacing-sm);
+  }
+}
