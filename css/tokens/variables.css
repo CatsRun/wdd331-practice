@@ -15,10 +15,12 @@
 
   /* Typography: font family, base size */
   --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-size-sm: 1rem;
   --font-size-base: 1.5rem;
+  /* --font-size-sm: 1rem; */
+  --font-size-sm: var(--font-size-base) * (1/3);
   /* **should this have vw to size to view window?** */
-  --font-size-lg: 3.2rem;
+  /* --font-size-lg: 3.2rem; */
+  --font-size-lg: var(--font-size-base) * 2.12;
 
   /* change in headings */
   --font-h1-difference: 2;

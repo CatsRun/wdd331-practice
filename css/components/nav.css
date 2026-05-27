@@ -15,7 +15,7 @@
 .site-nav a {
   color: var(--color-primary);
   /* text-decoration: none; */
-  padding: var(--spacing-small);
+  padding: var(--padding-sm);
   border-radius: var(--border-radius);
 }
 

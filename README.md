@@ -15,7 +15,7 @@ every push to main.
 
 lightning css manual rebuild, updated with: npm run build
 to install auto rebuild: npm install --save-dev chokidar-cli
-auto rebuild: npm run watch
+auto rebuild, for working on the site: npm run watch
 stop watch with Ctlr + c
 
 ## Pages

@@ -1,13 +1,13 @@
 /* here should have: only colors */
 :root {
   /* Colors: at least primary, background, text, accent */
-  --color-primary: #ffa136;
+  --color-primary: #d4681d;
   --color-background: #feffdc;
   --color-background-secondary: #fff;
 
   /* --color-accent: #ffa136; */
   --color-accent: #c18a09b2;
-  --color-lable-sm: #c18a09aa;
+  --color-accent2: --color-lable-sm: #c18a09aa;
 
   /* text color */
   --color-text: #0c0c0c;
