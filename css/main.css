@@ -2,7 +2,7 @@
 @layer tokens, base, layout, components, utilities;
 
 /* Tokens */
-@import url('tokens/colors.css') layer(tokens);
+@import url('tokens/color.css') layer(tokens);
 @import url('tokens/variables.css') layer(tokens);
 
 /* Base */

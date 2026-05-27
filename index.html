@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angela Murray--Practice Site</title>
-    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Before: multi-file with @import -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+	
+	<!-- After: single bundled file -->
+	<link rel="stylesheet" href="dist/styles.css">
+
 </head>
 <body>
-    <nav>
-        <h2>Assignments</h2>
+    <nav class="site-nav">
+        <!-- <h2>Assignments</h2> -->
         <ul>
-            <li>
-                <a href="unit-1/custom-properties/index.html">
-                    Custom Properties and Nesting
-                </a>
-            </li>
-            <li>
-                <a href="unit-2/index.html">
-                    Layered Components
-                </a>
-            </li>
+            <!-- <a href="../../index.html">&larr; Home</a> -->
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a></li>
+            <li><a href="unit-2/index.html">Layered Components</a></li>
         </ul>
     </nav>
-    <h1>Angela Murray</h1>
-    <p>The purpose of this site is to practice CSS.</p>
-    <p>I live in Virginia with my husband and 4 kids. I enjoy board and card games. A new card game we have is called SkyJo.</p>
+
+    <header class="page-header">
+    <h1>CSS practice Site</h1>
+    <h2>Angela Murray</h2>
+    </header>
+
+    <main>
+        <section class="card-group">
+            <div class="cards">
+                <article class="card">
+                <p>I live in Virginia with my husband and 4 kids. </p> 
+                </article>
+                             <article class="card">
+                <p> I enjoy board and card games. A new card game we have is called SkyJo.</p> 
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
