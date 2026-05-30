@@ -1,1 +1,15 @@
 /* small, single-purpose helper classes like .visually-hidden or .text-center. They live in the last named layer so they win by layer order without needing !important. */
+
+/* This hides the labels visually while keeping them accessible to screen readers */
+/* https://byui-cse.github.io/wdd331r-course/unit/3/prove/color-tokens-prove.html */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
