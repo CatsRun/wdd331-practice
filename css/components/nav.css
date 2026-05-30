@@ -13,7 +13,7 @@
 }
 
 .site-nav a {
-  color: var(--color-primary);
+  color: var(--seed-text-muted);
   /* text-decoration: none; */
   padding: var(--padding-sm);
   border-radius: var(--border-radius);
