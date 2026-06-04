@@ -17,6 +17,7 @@
 @import url('components/button.css');
 @import url('components/nav.css');
 @import url('components/theme-toggle.css') layer(components); /*add theme-toggle*/
+@import url('components/effects.css');
 
 /* Utilities */
 @import url('utilities/utilities.css') layer(utilities);

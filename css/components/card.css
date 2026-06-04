@@ -4,11 +4,13 @@
   /* background, padding, border-radius, shadow */
   /* Use a var() with a fallback value here. */
   background-color: var(--color-accent, --color-background-secondary);
-  box-shadow: var(--color-shadow, --color-shadow-secondary);
+  /* box-shadow: var(--color-shadow, --color-shadow-secondary); */
   /* box-shadow: var(--color-shadow, (#0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px)); */
+
   border-radius: 25px;
   margin: var(--spacing-sm);
   padding: var(--padding-md);
+  display: grid;
 
   .card-tag {
     /* small label: font-size, padding, background, border-radius */
@@ -16,7 +18,7 @@
     font-weight: bold;
     padding: var(--spacing-sm);
     border-radius: var(--border-radius);
-    background: var(--color-lable-sm);
+    /* background: var(--color-lable-sm); */
   }
 
   h3 {
@@ -30,7 +32,7 @@
 
   p {
     /* card body text */
-    color: var(--color-paragraph);
+    color: var(--color-text);
     font-family: var(--font-body);
     font-size: clamp(
       var(--font-size-sm),
@@ -45,7 +47,11 @@
       font-size: var(--font-size-sm);
     }
     a {
-      accent-color: var(--color-primary);
+      accent-color: var(--color-link);
     }
+  }
+
+  .card-image {
+    max-width: 100%;
   }
 }

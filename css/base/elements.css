@@ -4,7 +4,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   accent-color: var(--color-primary);
   line-height: var(--line-height-md);
 
@@ -16,7 +16,7 @@ body {
 
   a {
     /* link color from tokens */
-    accent-color: var(--color-accent);
+    accent-color: var(--color-text);
     &:hover {
       /* hover color from tokens */
       accent-color: var(--color-accent);

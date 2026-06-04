@@ -13,8 +13,7 @@
 }
 
 .site-nav a {
-  color: var(--seed-text-muted);
-  /* text-decoration: none; */
+  color: var(--color-text);
   padding: var(--padding-sm);
   border-radius: var(--border-radius);
 }
@@ -22,7 +21,7 @@
 /* active nav link is highlighted */
 .site-nav a[aria-current='page'] {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-bg);
 }
 
 /* nav buttons not in use have lower opacity */
