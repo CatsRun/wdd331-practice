@@ -29,20 +29,45 @@
   /* --color-primary: #eb7018; */ /*should be accent*/
   --color-primary: var(--seed-accent);
   /* --color-background: #feffdc; */
-  --color-background: var(--seed-bg);
+  --color-background: var(--color-bg);
   --color-background-secondary: #ffffff;
 
   /* --color-accent: #ffa136; */
   /* --color-accent: #c18a09b2; */
-  --color-accent: var(--seed-surface);
+  /* --color-accent: var(--seed-surface); */
   /* --color-accent2: --color-lable-sm: #c18a09aa; */
   --color-accent2: var(--seed-accent-hover);
 
   /* text color */
   /* --color-text: #0c0c0c; */
-  --color-text: var(--seed-text);
+  /* --color-text: var(--seed-text); */
   /* --color-paragraph: #0c0c0c; */
   --color-paragraph: var(--seed-text-muted);
+
+  /* gradients */
+
+  --color-card-gradient: light-dark(
+    linear-gradient(var(--seed-accent), var(--seed-surface)),
+    linear-gradient(oklch(0.68 0.18 240), var(--color-accent))
+  );
+  /* --color-card-gradient: var(--seed-surface), var(--seed-accent);
+
+  --color-card-gradient1: (var(--seed-surface));
+
+  --color-card-gradient2: (var(--seed-accent)); */
+
+  /* ---- frosted glass ---- */
+  --color-frosted-sm: color-mix(
+    in oklch,
+    var(--color-bg) 20%,
+    oklch(73.004% 0.15457 64.723 / 0.162)
+  );
+
+  --hero-background: radial-gradient(
+    ellipse at center,
+    transparent 35%,
+    oklch(72.591% 0.03 227.134 / 0.8) 100%
+  );
 }
 
 /* ***************************************************** */
@@ -120,9 +145,12 @@ html {
   /* ---- Semantic tokens ---- */
   --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.02 30));
   --color-surface: light-dark(var(--seed-surface), oklch(0.22 0.03 3));
-  --color-text: light-dark(var(--seed-text), oklch(0.88 0.02 03));
-  --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.68 0.03 25));
-  --color-accent: light-dark(var(--seed-accent), oklch(0.62 0.15 240));
+  --color-text: light-dark(var(--seed-text), oklch(91.887% 0.0001 271.152));
+  --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.6 0.03 25));
+  --color-accent: light-dark(
+    var(--seed-accent),
+    oklch(62.203% 0.14631 241.515 / 0.71)
+  );
   --color-accent-hover: light-dark(
     var(--seed-accent-hover),
     oklch(0.68 0.18 240)
