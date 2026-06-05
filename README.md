@@ -24,3 +24,4 @@ stop watch with Ctlr + c
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/index.html)
   All pages now support lgith-dark mode. color tokens live in css/takens/color. This uses seed tokens that then calculate to form the other colors.
+- [Visual-effects](unit-3\visual-effects\index.html)
