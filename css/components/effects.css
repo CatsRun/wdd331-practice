@@ -40,7 +40,7 @@
 /* cards */
 
 .card {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   background: var(--color-card-gradient);
 }
 
