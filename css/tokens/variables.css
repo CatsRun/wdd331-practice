@@ -62,18 +62,8 @@
   --color-shadow-secondary: #0c0c0c 0px 2px 4px, #0c0c0c 0px 3px 10px;
   /* *** */
 
-  --shadow-card:
-    0 1px 2px oklch(0.2 0 0 / 0.12), 0 4px 8px oklch(0.2 0 0 / 0.08),
-    0 12px 24px oklch(0.2 0 0 / 0.06);
-
-  --shadow-card-hover: light-dark(
-    0 1px 2px oklch(0.2 0 0 / 0.12),
-    0 4px 8px oklch(0.2 0 0 / 0.08),
-    0 12px 24px oklch(20.019% 0.00002 271.152 / 0.797),
-    0 1px 2px oklch(0.2 0 0 / 0.12),
-    0 4px 8px oklch(0.2 0 0 / 0.08),
-    0 12px 24px oklch(76.757% 0.00111 12.861 / 0.797)
-  );
+  --shadow-card: light-dark(var(--shadow-md), var(--shadow-md-dark));
+  --shadow-card-hover: light-dark(var(--shadow-lg), var(--shadow-lg-dark));
   --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
   /* text-shadow */
   --shadow-text: 0 1px 3px oklch(0.1 0 0 / 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3);
@@ -99,9 +89,19 @@
     0 16px 32px oklch(0.2 0 0 / 0.05);
   /* Level 3: modals, popovers, dialogs */
   --shadow-lg:
-    0 4px 8px oklch(0.2 0 0 / 0.1), 0 12px 24px oklch(0.2 0 0 / 0.08),
-    0 24px 48px oklch(0.2 0 0 / 0.06);
+    0 4px 8px oklch(20.019% 0.00002 271.152 / 0.201),
+    0 12px 24px oklch(20.019% 0.00002 271.152 / 0.182),
+    0 24px 48px oklch(20.019% 0.00002 271.152 / 0.15);
 
+  --shadow-md-dark:
+    0 2px 4px oklch(68.79% 0.00231 15.354 / 0.24),
+    0 6px 12px oklch(70.9% 0.00008 271.152 / 0.287),
+    0 16px 32px oklch(92.268% 0.00106 11.712 / 0.164);
+
+  --shadow-lg-dark:
+    0 1px 2px oklch(68.79% 0.00231 15.354 / 0.618),
+    0 4px 8px oklch(70.9% 0.00008 271.152 / 0.555),
+    0 12px 24px oklch(92.268% 0.00106 11.712 / 0.373);
   /* h1 */
   --font-size-sm-h1: calc(var(--font-size-sm) * var(--font-h1-difference));
   --font-size-base-h1: calc(var(--font-size-base) * var(--font-h1-difference));

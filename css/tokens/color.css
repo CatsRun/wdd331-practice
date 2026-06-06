@@ -145,7 +145,7 @@ html {
   /* ---- Semantic tokens ---- */
   --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.02 30));
   --color-surface: light-dark(var(--seed-surface), oklch(0.22 0.03 3));
-  --color-text: light-dark(var(--seed-text), oklch(91.887% 0.0001 271.152));
+  --color-text: light-dark(var(--seed-text), oklch(93.411% 0.0043 15.876));
   --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.6 0.03 25));
   --color-accent: light-dark(
     var(--seed-accent),
