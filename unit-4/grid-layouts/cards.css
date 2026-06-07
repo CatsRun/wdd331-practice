@@ -1,0 +1,47 @@
+.articles-page {
+  .card-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    /*grid safety pattern adds the 2nd 1fr to avoid overflow*/
+    /* 204px in the min because the text overflows if it is smaller */
+    /* a {
+    align-self: end;
+  } */
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px auto 1fr auto;
+    grid-template-areas:
+      'place-holder'
+      'title'
+      'body-text'
+      'link';
+  }
+  .card div:nth-child(1) {
+    height: 25px;
+    grid-area: place-holder;
+  }
+  .card h2 {
+    grid-area: title;
+  }
+
+  .card p {
+    grid-area: body-text;
+  }
+
+  .card div a {
+    grid-area: link;
+    align-self: end;
+  }
+
+  /* .card {
+    display: flexbox;
+    flex-direction: column;
+  }
+  .card a {
+    align-self: end;
+  } */
+}
