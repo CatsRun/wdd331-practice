@@ -58,8 +58,8 @@ button {
   margin: 10px;
   font-size: larger;
   background-color: burlywood;
-  height: 10rem;
-  width: 30rem;
+  height: 5rem;
+  width: 12rem;
 }
 
 button:hover {

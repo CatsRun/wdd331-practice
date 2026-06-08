@@ -1,0 +1,164 @@
+/* ***clip-path*** */
+/* circle */
+.text-wrap-example {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.circle {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip-path: circle(50%); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* ellispe */
+.text-wrap-example.ellipse {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.ellipse {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip-path: ellipse(50% 35% at center); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* inset - rounded corners */
+.text-wrap-example.inset {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.inset {
+  float: left;
+  width: 200px;
+  height: 200px;
+  /* border-radius: 50%; */
+  clip-path: inset(10% round 1rem); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* polygon */
+.text-wrap-example {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
+  ); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* Diagonal Sections and Angled Dividers */
+.text-wrap-example.angled {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.angled {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* transition on hover*/
+.text-wrap-example.transition {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.transition {
+  float: left;
+  width: 200px;
+  height: 200px;
+  /* border-radius: 50%; */
+  clip-path: circle(10% at center);
+  transition: clip-path 1.5s ease; /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+.transition:hover {
+  clip-path: circle(75% at center);
+}
+
+/* ***mask-image*** */
+/* fade-out */
+.text-wrap-example.fade {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.fade {
+  float: left;
+  width: 200px;
+  height: 200px;
+  -webkit-mask-image: linear-gradient(
+    black,
+    transparent
+  ); /*this is for older browswers*/
+  mask-image: linear-gradient(black, transparent); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* SVG shape mask */
+.text-wrap-example.mask {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.text-wrap-example-img.mask {
+  float: left;
+  width: 200px;
+  height: 200px;
+  mask-image: url('../../images/apple.svg');
+  mask-size: cover; /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
+  margin: 1.5rem;
+}
+
+/* headers */
+h1,
+h2 {
+  text-align: center;
+}
