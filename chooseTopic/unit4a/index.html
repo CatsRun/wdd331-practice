@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display: contents Demo</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../../css/tokens/color.css">
+</head>
+<body>
+
+  <h1>display: contents Demo</h1>
+
+  <!-- WITHOUT display: contents -->
+  <h2>1. Without <code>display: contents</code></h2>
+  <p>The wrapper becomes the only grid item (red border).</p>
+  
+  <div class="grid-without">
+    <div class="wrapper-without">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This should be a grid item</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This should be a grid item</p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>This should be a grid item</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WITH display: contents -->
+  <h2>2. With <code>display: contents</code></h2>
+  <p>The wrapper disappears and the cards become direct grid items (green border).</p>
+  
+  <div class="grid-with">
+    <div class="wrapper-with">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This is now a direct grid item</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This is now a direct grid item</p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>This is now a direct grid item</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button type="button" class="my-button" ><a href="#"></a>This is a button</button>
+  </div>
+</body>
+</html>
+
+<!-- writtten with the help of ai -->

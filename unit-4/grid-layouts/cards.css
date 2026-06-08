@@ -46,4 +46,11 @@
   .card a {
     align-self: end;
   } */
+
+  /* *******choose topic******** */
+  /* *******display contents***** */
+  .dc {
+    display: contents;
+    background-color: aliceblue;
+  }
 }
