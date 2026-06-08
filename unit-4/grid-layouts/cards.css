@@ -11,7 +11,7 @@
   }
 
   /* attempt 1 */
-  /* .card {
+  .card {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 25px auto 1fr auto;
@@ -20,8 +20,8 @@
       'title'
       'body-text'
       'link';
-  } */
-  /* .card div:nth-child(1) {
+  }
+  .card div:nth-child(1) {
     height: 25px;
     grid-area: place-holder;
   }
@@ -36,7 +36,7 @@
   .card div a {
     grid-area: link;
     align-self: end;
-  } */
+  }
 
   /* attempt 2 */
   /* .card {
