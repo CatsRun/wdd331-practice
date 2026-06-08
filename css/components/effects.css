@@ -116,7 +116,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  clip-path: circle(50%);
-  shape-outside: circle(50%);
+  clip-path: circle(50%); /*this changes the img*/
+  shape-outside: circle(50%); /*this changes the text*/
   margin: 1.5rem;
 }

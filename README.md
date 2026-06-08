@@ -27,3 +27,4 @@ stop watch with Ctlr + c
 - [Visual-effects](unit-3/visual-effects/index.html)
 - [Editorial Grid](unit-4/grid-layouts/editorial.html)
 - [Card Grid](unit-4/grid-layouts/cards.html)
+- [Clip path and Mask image]: (choose-topic/unit3b/index.html)
