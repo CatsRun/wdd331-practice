@@ -1,21 +1,21 @@
-.articles-page {
-  /* ---card subgrid start--- */
+/* .articles-page {
   .card-grid {
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
-      minmax(min(240px, 100%), 1fr)
-    ); /*grid safety pattern adds the 2nd 1fr to avoid overflow*/ /* 204px in the min because the text overflows if it is smaller */
-    grid-template-rows: auto auto 1fr auto;
-    gap: 1.5rem;
-    align-items: stretch; /*required for subgrid. it allows the child cards to fill the space avalible. otherwise the cards may vary in size and subgrid will not be effective. */
-  }
-  .card {
+      minmax(min(240px, 100%), 1fr) 
+    );*/
+/*grid safety pattern adds the 2nd 1fr to avoid overflow*/ /* 204px in the min because the text overflows if it is smaller */
+/* grid-template-rows: auto auto 1fr auto;
+    gap: 1.5rem; 
+    align-items: stretch;*/ /*required for subgrid. it allows the child cards to fill the space avalible. otherwise the cards may vary in size and subgrid will not be effective. */
+/* } */
+
+/* .card {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 4;
     gap: 0.7rem;
-    align-content: start;
   }
 
   .card > div[aria-hidden='true'] {
@@ -30,8 +30,33 @@
     grid-row: 3;
   }
   .card a {
-    /* display: grid; */
     grid-row: 4;
     align-self: end;
+  }
+} */
+
+.articles-page {
+  /* Base: each card manages its own rows */
+  .card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  }
+
+  /* Progressive enhancement: share tracks with the parent */
+  @supports (grid-template-rows: subgrid) {
+    .card-grid {
+      grid-template-rows: auto auto 1fr auto;
+      align-items: stretch;
+    }
+
+    .card {
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+    }
   }
 }
