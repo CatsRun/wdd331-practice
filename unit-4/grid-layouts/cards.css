@@ -1,55 +1,37 @@
 .articles-page {
+  /* ---card subgrid start--- */
   .card-grid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
-    /*grid safety pattern adds the 2nd 1fr to avoid overflow*/
-    /* 204px in the min because the text overflows if it is smaller */
-    /* a {
-    align-self: end;
-  } */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(240px, 100%), 1fr)
+    ); /*grid safety pattern adds the 2nd 1fr to avoid overflow*/ /* 204px in the min because the text overflows if it is smaller */
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1.5rem;
+    align-items: stretch; /*required for subgrid. it allows the child cards to fill the space avalible. otherwise the cards may vary in size and subgrid will not be effective. */
   }
-
-  /* attempt 1 */
   .card {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 25px auto 1fr auto;
-    grid-template-areas:
-      'place-holder'
-      'title'
-      'body-text'
-      'link';
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    gap: 0.7rem;
+    align-content: start;
   }
-  .card div:nth-child(1) {
-    height: 25px;
-    grid-area: place-holder;
+
+  .card > div[aria-hidden='true'] {
+    grid-row: 1;
   }
+
   .card h2 {
-    grid-area: title;
+    grid-row: 2;
   }
 
   .card p {
-    grid-area: body-text;
-  }
-
-  .card div a {
-    grid-area: link;
-    align-self: end;
-  }
-
-  /* attempt 2 */
-  /* .card {
-    display: flexbox;
-    flex-direction: column;
+    grid-row: 3;
   }
   .card a {
+    /* display: grid; */
+    grid-row: 4;
     align-self: end;
-  } */
-
-  /* *******choose topic******** */
-  /* *******display contents***** */
-  .dc {
-    display: contents;
   }
 }
